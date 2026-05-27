@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECHO OIL - Pure Natural Oils</title>
+    <!-- Load Tailwind CSS from CDN for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        /* Custom colors matching the design */
+        :root {
+            --primary-color: #38761D; /* Deep Green for accent */
+            --secondary-color: #557A46; /* Lighter Green */
+            --text-dark: #262626;
+        }
+
+        /* Apply Inter font family and background color */
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            background-color: #f7f7f7;
+        }
+
+        /* Styling for the Hero section background image and overlay */
+        .hero-section {
+            background-image: url('pure.webp');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Highlight button style */
+        .btn-primary {
+            background-color: var(--primary-color);
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        /* Custom green accent text */
+        .text-accent {
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navigation Bar -->
+    <header id="header" class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <!-- Logo/Brand Name -->
+            <a href="#home" class="text-2xl font-black tracking-wider text-accent">ECHO OIL</a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#home" class="nav-link text-gray-700 hover:text-accent transition duration-150">Home</a>
+                <a href="#about" class="nav-link text-gray-700 hover:text-accent transition duration-150">About</a>
+                <a href="#products" class="nav-link text-gray-700 hover:text-accent transition duration-150">Products</a>
+                <a href="#menu" class="nav-link text-gray-700 hover:text-accent transition duration-150">Menu</a>
+                <a href="#contact" class="px-5 py-2 rounded-full bg-black text-white hover:bg-gray-800 transition duration-300 shadow-md">CONTACT</a>
+            </nav>
+            
+            <!-- Mobile Menu Button (Hamburger) -->
+            <button id="menu-button" class="md:hidden p-2 text-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent" aria-label="Toggle menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden absolute w-full bg-white shadow-lg py-2">
+            <a href="#home" class="block px-4 py-2 text-gray-700 hover:bg-gray-100" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Home</a>
+            <a href="#about" class="block px-4 py-2 text-gray-700 hover:bg-gray-100" onclick="document.getElementById('mobile-menu').classList.add('hidden')">About</a>
+            <a href="#products" class="block px-4 py-2 text-gray-700 hover:bg-gray-100" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Products</a>
+            <a href="#menu" class="block px-4 py-2 text-gray-700 hover:bg-gray-100" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Menu</a>
+            <a href="#contact" class="block px-4 py-2 text-white bg-black hover:bg-gray-800 transition duration-300 mt-2" onclick="document.getElementById('mobile-menu').classList.add('hidden')">CONTACT</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- 1. Hero Section (Home) -->
+        <section id="home" class="hero-section text-white">
+            <div class="hero-overlay absolute inset-0"></div>
+            <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center md:text-left">
+                <!-- Main Headline -->
+                <h1 class="text-5xl md:text-7xl font-extrabold mb-4 leading-tight">Pure natural oils</h1>
+                <!-- Subtitle -->
+                <p class="text-xl md:text-2xl mb-8 font-light max-w-xl">
+                    Discover the finest oils for your needs
+                </p>
+                <!-- Call to Action Button -->
+                <a href="#products" class="inline-block px-8 py-3 rounded-xl font-semibold btn-primary text-white uppercase tracking-wider shadow-lg">
+                    View Products
+                </a>
+            </div>
+        </section>
+
+        <!-- 2. About Section -->
+        <section id="about" class="py-16 md:py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <!-- Content Column -->
+                <div class="space-y-6">
+                    <p class="text-accent text-sm font-semibold uppercase tracking-widest">PURE & NATURAL OILS</p>
+                    <h2 class="text-4xl md:text-5xl font-bold leading-tight">Elevate your cooking experience</h2>
+                    <p class="text-lg text-gray-600">
+                        At Echo Oil, we offer a carefully curated selection of oils including groundnut, sesame, and coconut oil. Each product is sourced for its purity and quality, ensuring that every drop enhances your culinary creations. Our passion for natural ingredients drives us to provide oils that are not only delicious but also packed with health benefits, elevating your cooking experience to new heights.
+                    </p>
+                    <a href="#contact" class="inline-block text-accent font-medium hover:underline transition duration-200">
+                        Get in touch &rarr;
+                    </a>
+                </div>
+
+                <!-- Image Column -->
+                <div class="rounded-2xl overflow-hidden shadow-2xl transform hover:scale-[1.01] transition duration-500 ease-in-out">
+                    <!-- Placeholder Image for Groundnut Oil Bottle, replicating the style from 1000196335.jpg -->
+                    <img src="bottle.jpeg" 
+                         alt="Bottle of Groundnut Oil surrounded by nuts and baskets" 
+                         class="w-full h-auto object-cover"
+                         onerror="this.onerror=null; this.src='https://placehold.co/800x600/557A46/ffffff?text=ECHO+OIL+Bottle+Placeholder';"
+                    >
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Products/Collection Section -->
+        <section id="products" class="py-16 md:py-24 bg-gray-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Section Header -->
+                <p class="text-accent text-sm font-semibold uppercase tracking-widest mb-2">PURE OILS COLLECTION</p>
+                <h2 class="text-4xl md:text-5xl font-bold mb-12">Explore our range of oils</h2>
+                
+                <!-- Product Grid (3 Columns) -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- Product 1: Groundnut Oil -->
+                    <div class="bg-white rounded-xl shadow-lg p-6 text-center transform hover:shadow-xl transition duration-300">
+                        <!-- Image Placeholder -->
+                        <div class="h-48 w-full flex justify-center items-center mb-4">
+                            <img src="ground.jpeg" 
+                                 alt="Bottle of Groundnut Oil with peanuts" 
+                                 class="rounded-lg object-contain h-full w-auto"
+                                 onerror="this.onerror=null; this.src='https://placehold.co/300x250/FACC15/ffffff?text=Groundnut+Oil+Placeholder';"
+                            >
+                        </div>
+                        <h3 class="text-xl font-semibold mt-2">Groundnut oil</h3>
+                        <p class="text-gray-600 mb-2">Pure and flavorful groundnut oil.</p>
+                        <p class="text-lg font-bold text-accent">$10.00</p>
+                        <a href="#" class="block mt-4 text-accent font-medium hover:underline text-sm">Pure groundnut oil &rarr;</a>
+                    </div>
+
+                    <!-- Product 2: Sesame Oil -->
+                    <div class="bg-white rounded-xl shadow-lg p-6 text-center transform hover:shadow-xl transition duration-300">
+                        <!-- Image Placeholder -->
+                        <div class="h-48 w-full flex justify-center items-center mb-4">
+                             <img src="sesa.jpeg" 
+                                 alt="Bottle of Sesame Oil with sesame seeds" 
+                                 class="rounded-lg object-contain h-full w-auto"
+                                 onerror="this.onerror=null; this.src='https://placehold.co/300x250/CA8A04/ffffff?text=Sesame+Oil+Placeholder';"
+                            >
+                        </div>
+                        <h3 class="text-xl font-semibold mt-2">Sesame oil</h3>
+                        <p class="text-gray-600 mb-2">Rich and aromatic sesame oil.</p>
+                        <p class="text-lg font-bold text-accent">$10.00</p>
+                        <a href="#" class="block mt-4 text-accent font-medium hover:underline text-sm">Organic sesame oil &rarr;</a>
+                    </div>
+
+                    <!-- Product 3: Coconut Oil -->
+                    <div class="bg-white rounded-xl shadow-lg p-6 text-center transform hover:shadow-xl transition duration-300">
+                        <!-- Image Placeholder -->
+                        <div class="h-48 w-full flex justify-center items-center mb-4">
+                             <img src="coco.jpeg" 
+                                 alt="Coconut oil in a jar with coconut halves" 
+                                 class="rounded-lg object-contain h-full w-auto"
+                                 onerror="this.onerror=null; this.src='https://placehold.co/300x250/10B981/ffffff?text=Coconut+Oil+Placeholder';"
+                            >
+                        </div>
+                        <h3 class="text-xl font-semibold mt-2">Coconut oil</h3>
+                        <p class="text-gray-600 mb-2">Versatile and nourishing coconut oil.</p>
+                        <p class="text-lg font-bold text-accent">$10.00</p>
+                        <a href="#" class="block mt-4 text-accent font-medium hover:underline text-sm">Cold-pressed coconut oil &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+  <!-- 4. Contact Section -->
+        <section id="contact" class="py-16 md:py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12">
+                
+                <!-- Left Column: Contact Form -->
+                <div class="bg-white p-6 md:p-10 rounded-xl shadow-xl border border-gray-100">
+                    <p class="text-accent text-sm font-semibold uppercase tracking-widest mb-2">GET IN TOUCH</p>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-8">We'd love to hear from you!</h2>
+                    
+                    <form action="#" method="POST" class="space-y-6">
+                        <!-- Name Field -->
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700">Name *</label>
+                            <input type="text" id="name" name="name" required placeholder="Jane Smith" 
+                                class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-accent focus:border-accent">
+                        </div>
+                        
+                        <!-- Email Field -->
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700">Email address *</label>
+                            <input type="email" id="email" name="email" required placeholder="email@website.com" 
+                                class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-accent focus:border-accent">
+                        </div>
+                        
+                        <!-- Phone Number Field -->
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-700">Phone number *</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="555-555-5555" 
+                                class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-accent focus:border-accent">
+                        </div>
+                        
+                        <!-- Message Field -->
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                            <textarea id="message" name="message" rows="4" 
+                                class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-accent focus:border-accent"></textarea>
+                        </div>
+                        
+                        <!-- Checkbox and Submit -->
+                        <div class="flex items-start">
+                            <div class="flex items-center h-5">
+                                <input id="consent" name="consent" type="checkbox" required
+                                    class="focus:ring-accent h-4 w-4 text-accent border-gray-300 rounded">
+                            </div>
+                            <div class="ml-3 text-sm">
+                                <label for="consent" class="font-medium text-gray-700">I allow this website to store my submission so they can respond to my inquiry.*</label>
+                            </div>
+                        </div>
+
+                        <div>
+                            <button type="submit" class="w-full px-6 py-3 rounded-xl font-semibold text-white uppercase tracking-wider btn-primary shadow-lg">
+                                Submit
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Right Column: Business Details -->
+                <div class="space-y-8 p-6 md:p-10">
+                    
+                    <!-- Get in Touch (Email) -->
+                    <div class="space-y-2">
+                        <h3 class="text-xl font-semibold mb-2">Get in touch</h3>
+                        <p class="flex items-center text-gray-700">
+                            <svg class="w-5 h-5 mr-2 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-9 13V5"></path></svg>
+                            <a href="mailto:pramodtonage@gmail.com" class="hover:underline">pramodtonage@gmail.com</a>
+                        </p>
+                    </div>
+
+                    <!-- Location -->
+                    <div class="space-y-2">
+                        <h3 class="text-xl font-semibold mb-2">Location</h3>
+                        <p class="flex items-center text-gray-700">
+                            <svg class="w-5 h-5 mr-2 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0L6.343 16.657A8 8 0 1117.657 16.657z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            Bengaluru, KA IN
+                        </p>
+                    </div>
+
+                    <!-- Hours -->
+                    <div class="space-y-4">
+                        <h3 class="text-xl font-semibold mb-2">Hours</h3>
+                        <ul class="space-y-1 text-gray-700">
+                            <li class="flex justify-between"><span>Monday</span> <span>9:00am – 10:00pm</span></li>
+                            <li class="flex justify-between"><span>Tuesday</span> <span>9:00am – 10:00pm</span></li>
+                            <li class="flex justify-between"><span>Wednesday</span> <span>9:00am – 10:00pm</span></li>
+                            <li class="flex justify-between"><span>Thursday</span> <span>9:00am – 10:00pm</span></li>
+                            <li class="flex justify-between"><span>Friday</span> <span>9:00am – 10:00pm</span></li>
+                            <li class="flex justify-between"><span>Saturday</span> <span>9:00am – 6:00pm</span></li>
+                            <li class="flex justify-between"><span>Sunday</span> <span>9:00am – 12:00pm</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
+            &copy; 2025 ECHO OIL. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for Mobile Menu Toggle
+        document.getElementById('menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Placeholder for smooth scrolling function 
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Simple script to handle form submission (prevents page refresh)
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Show a simple success message
+            const submitButton = e.target.querySelector('button[type="submit"]');
+            submitButton.textContent = 'Submission Received!';
+            submitButton.classList.remove('btn-primary');
+            submitButton.classList.add('bg-green-600');
+            
+            // Reset message after 3 seconds
+            setTimeout(() => {
+                submitButton.textContent = 'Submit';
+                submitButton.classList.add('btn-primary');
+                submitButton.classList.remove('bg-green-600');
+            }, 3000);
+
+            console.log('Form Submitted (Data not saved to a real database, this is a code demonstration.)');
+        });
+    </script>
+
+</body>
+</html>
+

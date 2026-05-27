@@ -1,0 +1,191 @@
+ body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light gray background */
+    color: #333; /* Dark text color */
+}
+
+header {
+    background-color: #1a4d2e; /* Dark green/oil color */
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 5px;
+    font-size: 3em;
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+main {
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto; /* Center the content */
+}
+
+section {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #4CAF50; /* Green accent color */
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 10px;
+}
+
+button {
+    background-color: #ff9800; /* Orange/Gold accent for call-to-action */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #e68900;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    margin-top: 30px;
+}
+
+ <header>
+        <img src="YOUR_IMAGE_FILE_NAME.jpg" alt="Echo Oil Logo" class="logo">
+        
+        <h1>Echo Oil</h1>
+        <p>Driving Innovation. Protecting Engines.</p>
+    </header>
+    
+* **`src`**: This is the most important part; it tells the browser the name of the image file.
+* **`alt`**: This is the *alternative text* for the image. It is important for accessibility and SEO.
+
+***
+
+## 🎨 Step 3: Style the Image (in `style.css`)
+
+The image might look too large initially. We use the `class="logo"` we added to the HTML to style it in the `style.css` file.
+
+Add this new section of code to the **end** of your existing `style.css` file:
+
+css
+/* Styling for the Logo Image */
+.logo {
+    width: 150px; /* Set a fixed size for the logo */
+    height: auto; /* Maintain the image's proportions */
+    display: block; /* Make it centered */
+    margin: 0 auto 10px auto; /* Center it and add space below */
+    border-radius: 50%; /* Optional: make the logo round */
+}
+
+/* Example of adding a product image */
+.product-img {
+    max-width: 100%; /* Image will not be wider than its container */
+    height: auto;
+    border-radius: 5px;
+   margin-top: 15px;
+}
+<section id="products">
+            <h2>Our Featured Product</h2>
+            <div class="product-card">
+                <img src="download.jpeg">
+                <h3>EchoMax Synthetic 5W-30</h3>
+                <p class="price">$19.99</p>
+                <p class="description">
+                    Premium full synthetic oil designed for modern engines. Provides ultimate wear protection and fuel economy.
+                </p>
+                <a href="#" class="buy-button">Purchase Now</a>
+            </div>
+        </section>
+        
+        
+
+* **Note:** You would need an image named `synthetic_oil_bottle.jpg` in your folder.
+* **The `<a>` Tag:** The `class="buy-button"` is currently linked to `#` (nothing), but in a real store, you would replace `#` with the link to your checkout page.
+
+## 🎨 Step 2: CSS for Styling the Card and Button (`style.css`)
+
+Now, we need to add styling to the **end** of your `style.css` file to make the product card look professional and the "Purchase Now" button stand out.
+
+css
+/* --- Product Card Styling --- */
+
+#products {
+    text-align: center; /* Center the product header */
+}
+
+.product-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 300px;
+    margin: 20px auto; /* Center the card itself */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    color: #1a4d2e; /* Dark green/oil color */
+    margin-top: 0;
+}
+
+.price {
+    font-size: 1.5em;
+    color: #ff9800; /* Orange/Gold accent */
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.description {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* --- Buy Button Styling (Replacing the old button style) --- */
+
+.buy-button {
+    background-color: #ff5722; /* A strong red/orange for buying */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    text-align: center;
+    text-decoration: none; /* Remove underline from link */
+    display: block; /* Make it full width of the card */
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.buy-button:hover {
+    background-color: #e64a19;
+}
+
